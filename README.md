@@ -37,7 +37,7 @@ The total training objective is `L_total = L_task + λ * L_quad`, balancing empi
 ![3D Bhargava Cube Embeddings](3d_embeddings.png)
 *Figure 1: 3D embeddings of MNIST test samples. Each color represents a distinct digit class, demonstrating the clean, separated manifold learned by the model.*
 
-## Status & Lessons Learned: A Crucible of Research
+## Status & Lessons Learned:
 
 This project was formalized into a research paper and submitted for peer review. While the paper was not ultimately accepted for publication at the initial venue (citing a high volume of submissions), the process and the feedback were invaluable and have become a cornerstone of our current research philosophy.
 
