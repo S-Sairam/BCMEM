@@ -37,6 +37,13 @@ The total training objective is `L_total = L_task + λ * L_quad`, balancing empi
 ![3D Bhargava Cube Embeddings](3d_embeddings.png)
 *Figure 1: 3D embeddings of MNIST test samples. Each color represents a distinct digit class, demonstrating the clean, separated manifold learned by the model.*
 
+## Status & Lessons Learned: A Crucible of Research
+
+This project was formalized into a research paper and submitted for peer review. While the paper was not ultimately accepted for publication at the initial venue (citing a high volume of submissions), the process and the feedback were invaluable and have become a cornerstone of our current research philosophy.
+
+*   **Validation of Novelty:** Positive feedback from reviewers validated the core concept as a **"highly original idea"** and the **"first application of number-theoretic constructs in neural representation learning."** This confirmed that the high-risk, first-principles approach was a valid and valuable scientific direction.
+*   **The Critical Lesson: Execution is Everything.** Conversely, reviewer feedback also highlighted critical weaknesses in the paper's clarity, communication, and the narrative connecting the esoteric theory to the empirical results. This project served as a **crucible.** It taught us a vital lesson: a novel idea is worthless without an equally clear, rigorous, and compelling experimental story. The gap between a good idea and good *research* lies in the brutal details of execution.
+*   **Informing Future Work:** The lessons in rigor and communication learned from this project are now being directly applied to our current, more ambitious research campaigns in Causal Neuro-Symbolic AI.
 
 ## Citation
 
