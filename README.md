@@ -34,7 +34,7 @@ The total training objective is `L_total = L_task + λ * L_quad`, balancing empi
 *   **Performance:** On the MNIST benchmark, the model achieves a competitive **99.46%** classification accuracy.
 *   **Structured Representation:** More importantly, the algebraic regularization forces the emergence of a highly structured and interpretable latent space. As shown below, the 3D embeddings for the MNIST test set naturally form distinct, well-separated clusters according to their digit class. This geometric structure is an **emergent property** of the algebraic constraints, not a result of direct geometric supervision.
 
-![3D Bhargava Cube Embeddings](3d_embeddings.png)
+![3D Bhargava Cube Embeddings](bhargava_cube_3d_visualization.png)
 *Figure 1: 3D embeddings of MNIST test samples. Each color represents a distinct digit class, demonstrating the clean, separated manifold learned by the model.*
 
 ## Status & Lessons Learned:
