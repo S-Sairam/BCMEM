@@ -1,57 +1,47 @@
-# Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings
+# BCMEM: Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv:XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) <!-- Replace with your arXiv link -->
+[![Conference](https://img.shields.io/badge/ICAA_2026-Accepted-blueviolet)]([https://icaa-conf.org/](https://icaa2026.framer.website/)) <!-- Link to the conference -->
+[![Publisher](https://img.shields.io/badge/Publication-Springer_LNCS-green)]([https://www.springer.com/series/558](https://link.springer.com/conference/icaa))
+[![Paper](https://img.shields.io/badge/Preprint-arXiv:XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) <!-- Replace with your arXiv link -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official PyTorch implementation and research artifacts for the paper "Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings."
+This repository contains the official implementation for the paper "Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings," accepted at the International Conference on Applied Algorithms (ICAA) 2026.
 
 ---
 
-## Overview
+## 1. Abstract
 
-This project presents a novel approach to neural representation learning that incorporates algebraic constraints inspired by **Bhargava cubes** from algebraic number theory. Traditional deep learning methods often learn representations in unstructured latent spaces, lacking interpretability and mathematical consistency. Our framework addresses this by mapping input data to a constrained 3-dimensional latent space where embeddings are regularized to satisfy learned quadratic relationships.
+We present a novel approach to neural representation learning that incorporates algebraic constraints inspired by Bhargava cubes from number theory. Traditional deep learning methods learn representations in unstructured latent spaces lacking interpretability and mathematical consistency. Our framework maps input data to a constrained 3-dimensional latent space where embeddings are regularized to satisfy learned quadratic relationships derived from Bhargava's combinatorial structures. The architecture employs a differentiable auxiliary loss function, guiding models toward mathematically structured representations. On MNIST, our method achieves **99.46% accuracy** while producing interpretable 3D embeddings that naturally cluster by class and satisfy the learned algebraic constraints.
 
-This research was a formal endeavor to move beyond applying existing tools and to explore, from first principles, whether deep, abstract mathematical structures could serve as effective inductive biases for building more structured and interpretable AI systems.
+## 2. The Core Contribution: Architectural Regularization from First Principles
 
-## The Core Idea: An Inductive Bias from Number Theory
+This project was a formal inquiry into a fundamental hypothesis: that deep mathematical structures from abstract algebra can serve as a powerful new class of **inductive biases** for deep learning.
 
-The central hypothesis of this work is that the structural principles of high-level mathematics can provide a powerful new source of regularization for deep learning.
-*   **The Problem:** Standard neural networks learn a chaotic, high-dimensional "filing cabinet" for data, which is effective but uninterpretable.
-*   **Our Approach:** We aimed to force the network to learn a "crystal lattice"—a latent space with an inherent, mathematically consistent geometric structure.
-*   **The Tool:** We used the formalism of Bhargava cubes, which encode profound relationships between quadratic forms, as the basis for a novel, differentiable auxiliary loss function. This loss function "guides" the learned embeddings to align with these number-theoretic constraints.
-
-## Architecture & Methodology
-
-The model, BCMEM (Bhargava Cube-based Memory Embedding Model), is an encoder-regularization framework with three key stages:
-1.  **Encoder:** A series of fully connected layers that map an input image (e.g., MNIST) to a point in a 3D latent space, `z = (z1, z2, z3)`.
-2.  **Quadratic Regularization:** A novel, differentiable auxiliary loss function (`L_quad`) that penalizes the latent representation `z` if it violates the discriminant consistency laws inspired by Bhargava cube compositions. This loss operates independently of the main classification task.
-3.  **Classifier:** A standard classification head that predicts the final class label from the latent representation `z`.
-
-The total training objective is `L_total = L_task + λ * L_quad`, balancing empirical accuracy with algebraic consistency.
-
-## Results & Key Findings
-
-*   **Performance:** On the MNIST benchmark, the model achieves a competitive **99.46%** classification accuracy.
-*   **Structured Representation:** More importantly, the algebraic regularization forces the emergence of a highly structured and interpretable latent space. As shown below, the 3D embeddings for the MNIST test set naturally form distinct, well-separated clusters according to their digit class. This geometric structure is an **emergent property** of the algebraic constraints, not a result of direct geometric supervision.
+The core novelty is a **differentiable quadratic regularization loss** inspired by the Gauss composition laws on binary quadratic forms, as generalized by Manjul Bhargava's work on 2x2x2 integer cubes. This loss term acts as a structural regularizer, forcing the learned latent space to conform to these number-theoretic principles, thereby moving beyond purely geometric or statistical priors.
 
 ![3D Bhargava Cube Embeddings](bhargava_cube_3d_visualization.png)
-*Figure 1: 3D embeddings of MNIST test samples. Each color represents a distinct digit class, demonstrating the clean, separated manifold learned by the model.*
+_**Figure 1:** 3D embeddings of MNIST test samples, demonstrating the emergence of a highly structured, class-separated manifold as a direct result of our algebraic regularization._
 
-## Status & Lessons Learned:
+## 3. Key Results
 
-This project was formalized into a research paper and submitted for peer review. While the paper was not ultimately accepted for publication at the initial venue (citing a high volume of submissions), the process and the feedback were invaluable and have become a cornerstone of our current research philosophy.
+-   **High Performance:** Achieves **99.46%** classification accuracy on the MNIST test set.
+-   **Structured Latent Space:** Successfully learns a low-dimensional, interpretable manifold where classes are well-separated.
+-   **Algebraic Consistency:** The learned embeddings satisfy the imposed quadratic constraints, proving the effectiveness of the auxiliary loss.
 
-*   **Validation of Novelty:** Positive feedback from reviewers validated the core concept as a **"highly original idea"** and the **"first application of number-theoretic constructs in neural representation learning."** This confirmed that the high-risk, first-principles approach was a valid and valuable scientific direction.
-*   **The Critical Lesson: Execution is Everything.** Conversely, reviewer feedback also highlighted critical weaknesses in the paper's clarity, communication, and the narrative connecting the esoteric theory to the empirical results. This project served as a **crucible.** It taught us a vital lesson: a novel idea is worthless without an equally clear, rigorous, and compelling experimental story. The gap between a good idea and good *research* lies in the brutal details of execution.
-*   **Informing Future Work:** The lessons in rigor and communication learned from this project are now being directly applied to our current, more ambitious research campaigns in Causal Neuro-Symbolic AI.
+## 4. Citation
 
-## Citation
+This work is published in the proceedings of ICAA 2026 (Springer, Lecture Notes in Computer Science).
 
-If you find this work informative, please consider citing the preprint:
 ```bibtex
-@article{sairam2025bhargava,
-  title   = {Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings},
-  author  = {Sairam S, Prateek P Kulkarni},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025}
+@inproceedings{sairam2025bhargava,
+author = {Sairam S, Prateek P Kulkarni},
+title = {Bhargava Cube-Inspired Quadratic Regularization for Structured Neural Embeddings},
+year = {2026},
+isbn = {enter},
+publisher = {Springer-Verlag},
+doi = {doi},
+booktitle = {Applied Algorithms: Third International Conference, ICAA 2026, Kolkata, India, January 7–9, 2026, Proceedings},
+keywords = {Representation learning, Bhargava cubes, geometric regularization, dimensionality reduction, interpretable embeddings},
+location = {Kolkata, India}
 }
+```
