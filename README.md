@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-Framework-EE4C2C.svg)](https://pytorch.org/)
-
+[Paper](/bcmem_icaa.pdf)
 This repository contains the official PyTorch implementation for BCMEM, an independent research project exploring the use of number-theoretic priors for structured representation learning.
 
 ---
