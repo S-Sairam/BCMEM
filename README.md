@@ -33,5 +33,8 @@ While the experiment was successful on its own terms, its most valuable outcome 
 
 This realization has directly shaped my current research focus on developing scalable, robust, and empirically-validated machine learning systems.
 
-## 5. Publication Note
-To formalize the results of this study, a paper was written and subsequently published by Springer in their Lecture Notes in Computer Science (LNCS) series.
+## 5. Project Status & Peer Review
+
+A paper formalizing this study was submitted for peer review. The feedback received provided a clear roadmap for future improvements, particularly concerning large-scale validation beyond the MNIST benchmark.
+
+To pursue this more rigorous direction and incorporate the expert feedback from the review process, the paper has been withdrawn from publication to undergo a comprehensive rework. The core code for the original proof-of-concept remains available in this repository for archival purposes.
